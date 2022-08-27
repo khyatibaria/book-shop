@@ -1,0 +1,16 @@
+.product-list-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 2rem auto;
+}
+.menu-filter-container {
+  width: 20%;
+}
+.product-listing-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  align-items: center;
+  width: 75%;
+}

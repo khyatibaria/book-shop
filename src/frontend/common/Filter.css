@@ -1,0 +1,29 @@
+.filter-container {
+  padding: 0.5rem;
+}
+.filter-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3rem;
+  padding: 0.25rem;
+}
+.filter-input {
+  height: 1.5rem;
+  width: 100%;
+}
+.filter-input:focus {
+  outline: none;
+}
+.filter-body {
+  height: calc(100% - 3rem);
+  display: flex;
+  flex-direction: column;
+}
+.filter-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.25rem;
+  font-weight: 700;
+}

@@ -1,0 +1,31 @@
+.accordion-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  background-color: #e6e6e6;
+}
+
+.accordion-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0.25rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.accordion-button {
+  margin: 0.25rem;
+  border: none;
+  background: transparent;
+}
+
+.accordion-body {
+  height: calc(100% - 3rem);
+  padding: 0.5rem;
+}
