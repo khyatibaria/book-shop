@@ -6,7 +6,6 @@ const Login = (props) => {
   return (
     <div>
       <NavBar sx={{ justifyContent: "space-between" }} />
-      <Toast />
       <div className="container">
         <LoginForm />
       </div>

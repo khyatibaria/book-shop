@@ -28,7 +28,7 @@ const NavBar = (props) => {
           </div>
         </NavLink>
         <NavLink
-          to="/productlist"
+          to="/wishlist"
           className="navigation-link badge"
           title="Wishlist"
         >
