@@ -1,38 +1,32 @@
 const HorizontalProductCard = (props) => {
-  const { badgeText, src, title, author, price } = props;
+  const { badgeText, src, title, author, price, quantity } = props;
   return (
-    <div>
-      <div className="horizontal-card">
-        <div className="horizontal-card-head">
-          <div className="card-badge">{badgeText}</div>
-          <div className="card-close">
-            <i className="fas fa-times"></i>
-          </div>
-          <img className="card-image" src={src} alt="media" />
+    <div class="horizontal-card">
+      <div class="horizontal-card-head">
+        {badgeText && <div class="card-badge">{badgeText}</div>}
+        <div class="card-close">
+          <i class="fas fa-times"></i>
         </div>
-        <div className="horizontal-card-body">
-          <div className="card-text">
-            <div className="card-title">{title}</div>
-            <div className="card-subtitle">{author}</div>
-            <div>Rs.{price}/-</div>
-          </div>
-          <div className="card-quantity">
-            <span className="quantity-label">Quantity:-</span>
-            <button className="quantity-btn">
-              <i className="fas fa-plus-square"></i>
-            </button>
-            <input className="card-input" />
-            <button className="quantity-btn">
-              <i className="fas fa-minus-square"></i>
-            </button>
-          </div>
-          <button className="horizontal-card-btn danger">
-            Move to Wishlist
+        <img class="horizontal-image" src={src} alt="media" />
+      </div>
+      <div class="horizontal-card-body">
+        <div class="card-text">
+          <div class="card-title">{title}</div>
+          <div class="card-subtitle">{author}</div>
+          <div>Rs.{price}/-</div>
+        </div>
+        <div class="card-quantity">
+          <span class="quantity-label">{quantity}</span>
+          <button class="quantity-btn">
+            <i class="fas fa-plus-square"></i>
           </button>
-          <button className="horizontal-card-btn warning">
-            Remove from Cart
+          <input class="card-input" />
+          <button class="quantity-btn">
+            <i class="fas fa-minus-square"></i>
           </button>
         </div>
+        <button class="horizontal-card-btn danger">Move to Wishlist</button>
+        <button class="horizontal-card-btn warning">Remove from Cart</button>
       </div>
     </div>
   );
