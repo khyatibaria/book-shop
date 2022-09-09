@@ -46,7 +46,7 @@ const NavBar = (props) => {
           </div>
         </NavLink>
         <NavLink
-          to="/signup"
+          to="/cart"
           className="navigation-link badge"
           title="Add to Cart"
         >
