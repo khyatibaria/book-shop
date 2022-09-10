@@ -1,18 +1,17 @@
 const ProductItem = (props) => {
   const {
-    key,
     badgeText,
     src,
     title,
     author,
     price,
     buttonLabel,
-    addToCart = () => {},
+    onClick = () => {},
     addToWishList = () => {},
   } = props;
   return (
     <>
-      <div key={key} className="card">
+      <div className="card">
         <div className="card-header">
           {badgeText && <div className="card-badge">{badgeText}</div>}
           <img className="card-image" src={src} />
@@ -24,7 +23,7 @@ const ProductItem = (props) => {
             <div>Rs.{price}/-</div>
           </div>
           <div className="card-footer">
-            <button className="card-button" onClick={addToCart}>
+            <button className="card-button" onClick={onClick}>
               {buttonLabel}
             </button>
             <button

@@ -1,11 +1,11 @@
 const Toast = (props) => {
   const { message } = props;
   return (
-    <div class="toast-container">
-      <div class="toast-message">{message}</div>
+    <div className="toast-container">
+      <div className="toast-message">{message}</div>
       <div>
-        <button class="toast-close-button">
-          <i class="fa fa-times" aria-hidden="true"></i>
+        <button className="toast-close-button">
+          <i className="fa fa-times" aria-hidden="true"></i>
         </button>
       </div>
     </div>

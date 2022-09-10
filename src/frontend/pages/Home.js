@@ -1,18 +1,11 @@
 import "./Home.css";
-import NavBar from "../common/NavBar";
 import MenuBar from "../common/MenuBar";
 import { images } from "../assets/index";
 import Carousel from "../common/Carousel";
-import Footer from "../common/Footer";
 const Home = () => {
   const { AllBooks, SlideOne, SlideTwo, SlideThree, SlideFour } = images;
   return (
-    <div>
-      <NavBar
-        searchBar={true}
-        // wishlistCount={wishlistCount}
-        // productCount={productCount}
-      />
+    <>
       <MenuBar />
       <Carousel
         imgOne={SlideOne}
@@ -34,8 +27,7 @@ const Home = () => {
           <img src={AllBooks} className="bestseller-img" alt="all_books" />
         </div>
       </section>
-      <Footer />
-    </div>
+    </>
   );
 };
 export default Home;

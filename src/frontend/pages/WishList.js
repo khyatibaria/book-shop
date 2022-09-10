@@ -41,22 +41,19 @@ const WishList = () => {
     },
   ];
   return (
-    <div>
-      <NavBar sx={{ justifyContent: "space-between" }} />
-      <div className="wishlist-container">
-        {products?.map((item, index) => {
-          return (
-            <ProductItem
-              key={index}
-              title={item.title}
-              author={item.author}
-              price={item.price}
-              src={item.src}
-              buttonLabel="Add to Cart"
-            />
-          );
-        })}
-      </div>
+    <div className="wishlist-container">
+      {products?.map((item, index) => {
+        return (
+          <ProductItem
+            key={index}
+            title={item.title}
+            author={item.author}
+            price={item.price}
+            src={item.src}
+            buttonLabel="Add to Cart"
+          />
+        );
+      })}
     </div>
   );
 };

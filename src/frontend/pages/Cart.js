@@ -5,12 +5,9 @@ import CartList from "./CartList";
 import Summary from "../components/Summary";
 const Cart = () => {
   return (
-    <div>
-      <NavBar sx={{ justifyContent: "space-between" }} />
-      <div className="cart-container">
-        <CartList />
-        <Summary />
-      </div>
+    <div className="cart-container">
+      <CartList />
+      <Summary />
     </div>
   );
 };

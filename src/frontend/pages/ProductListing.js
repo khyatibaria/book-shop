@@ -1,12 +1,20 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import "./ProductListing.css";
 import NavBar from "../common/NavBar";
 import MenuFilters from "../components/MenuFilters";
 import ProductItem from "../common/ProductItem";
+import { useCart } from "../context/cart-context";
+import { FilterProvider, useFilter } from "../context/filter-context";
+
 const ProductListing = () => {
   const [allProduct, setAllProduct] = useState([]);
   const [wishlistCount, setWishlistCount] = useState("0");
-  const [productCount, setProductCount] = useState("0");
+  const { setCartProduct, addToCart } = useCart();
+  const { sortFilter } = useFilter();
+  const menuFilterHandler = useCallback(() => {
+    console.log("called", sortFilter["low to high"]);
+    //if (sortFilter["low to high"] === true) console.log("hey");
+  }, []);
   useEffect(() => {
     fetch("/api/products")
       .then((response) => response.json())
@@ -15,13 +23,11 @@ const ProductListing = () => {
         setAllProduct(data.products);
       });
   }, []);
+  useEffect(() => {
+    if (sortFilter !== null) menuFilterHandler();
+  }, [sortFilter]);
   return (
-    <div>
-      <NavBar
-        searchBar={true}
-        wishlistCount={wishlistCount}
-        productCount={productCount}
-      />
+    <FilterProvider>
       <div className="product-list-wrapper">
         <div className="menu-filter-container">
           <MenuFilters />
@@ -36,11 +42,7 @@ const ProductListing = () => {
                 price={item.price}
                 src={item.src}
                 buttonLabel="Add to Cart"
-                addToCart={() => {
-                  setProductCount((prev) => {
-                    return +prev + 1;
-                  });
-                }}
+                onClick={addToCart}
                 addToWishList={() => {
                   setWishlistCount((prev) => {
                     return +prev + 1;
@@ -51,7 +53,7 @@ const ProductListing = () => {
           })}
         </div>
       </div>
-    </div>
+    </FilterProvider>
   );
 };
 export default ProductListing;

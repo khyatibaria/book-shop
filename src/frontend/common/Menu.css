@@ -6,11 +6,11 @@
   color: #ffffff;
   font-size: 1rem;
   font-weight: 600;
+  min-height: 5vh;
   background-color: var(--secondary-color);
 }
-
 .menu-btn {
-  display: inline-block;
+  display: none;
   outline: none;
   background-color: transparent;
   margin: 0.25rem;
@@ -19,4 +19,19 @@
   border: none;
   cursor: pointer;
   color: #ffffff;
+}
+.menu-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+@media only screen and (max-width: 650px) {
+  .menu-container {
+    justify-content: start;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .menu-link {
+    display: none;
+  }
 }

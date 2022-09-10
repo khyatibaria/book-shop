@@ -8,6 +8,7 @@ import SlideFour from "./slider_four.avif";
 import Twitter from "./twitter.svg";
 import Github from "./github.svg";
 import LinkedIn from "./linkedin.svg";
+import Heart from "./heart.svg";
 export const images = {
   BookLogo,
   ArrowDowm,
@@ -19,4 +20,5 @@ export const images = {
   Twitter,
   Github,
   LinkedIn,
+  Heart,
 };

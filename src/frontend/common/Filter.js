@@ -12,10 +12,9 @@ const Filter = (props) => {
         {List?.map((item) => {
           if (item.type === "radio") {
             return (
-              <div className="filter-item">
+              <div className="filter-item" key={item.id}>
                 <Radio
                   id={item.label.toLowerCase()}
-                  key={item.id}
                   name={item.name}
                   label={item.label}
                   labelPosition={item.labelPosition}
