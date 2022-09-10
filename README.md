@@ -1,3 +1,11 @@
-## E-Commerce Backend
+# Book Shop
 
-This folder contains the Mock Backend created for E-Commerce App. It contains different API end-points and database configuration for building E-Commerce; so that you can focus on building Frontend.
+An ecommerce book store for all nerdy readers
+
+## Pages Curently Present
+<a href="#">Home</a>
+Product Listing
+Cart
+Wishlist
+Login
+Signup
