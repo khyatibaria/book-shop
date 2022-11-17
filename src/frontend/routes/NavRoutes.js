@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import Signup from "./Signup";
-import ProductListing from "./ProductListing";
-import Login from "./Login";
-import Home from "./Home";
-import WishList from "./WishList";
-import Cart from "./Cart";
-import Address from "./Address";
+import Signup from "../pages/Signup";
+import ProductListing from "../pages/ProductListing";
+import Login from "../pages/Login";
+import Home from "../pages/Home";
+import WishList from "../pages/WishList";
+import Cart from "../pages/Cart";
+import Address from "../pages/Address";
 import Mockman from "mockman-js";
 const NavRoutes = () => {
   return (
